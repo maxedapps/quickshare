@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "ignorePatterns": [
+    "node_modules/**",
+    ".agents/**",
+    ".claude/**",
+    ".alchemy/**",
+    "build/**",
+    "dist/**",
+    "coverage/**",
+    ".plans/**",
+    ".reviews/**",
+    ".reports/**",
+    "reports/**",
+    "patches/**",
+    "tools/oxlint/anti-slop/**",
+    "pnpm-lock.yaml"
+  ]
+}

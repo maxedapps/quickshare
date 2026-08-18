@@ -1,0 +1,25 @@
+packages:
+  - apps/*
+
+strictPeerDependencies: true
+
+# capnp-es@0.0.16 (Alchemy runtime pin) peers typescript ^5.7.3 || ^6.0.0.
+# This repo is TypeScript 7 only; accept that known pair.
+peerDependencyRules:
+  allowedVersions:
+    "capnp-es@0.0.16>typescript": "7.0.2"
+
+overrides:
+  "@alchemy.run/cloudflare-runtime@2.0.0-beta.72>capnp-es": "0.0.16"
+
+minimumReleaseAgeExclude:
+  - effect@4.0.0-rc.110
+  - "@effect/platform-node@4.0.0-rc.110"
+  - "@effect/platform-node-shared@4.0.0-rc.110"
+  - "@effect/vitest@4.0.0-rc.110"
+
+allowBuilds:
+  esbuild: true
+  msgpackr-extract: true
+  sharp: true
+  workerd: true

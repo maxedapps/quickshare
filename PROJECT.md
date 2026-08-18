@@ -32,12 +32,12 @@ Each share gets an unguessable URL. Replacing, listing, inspecting, expiring, an
 
 Access is optional and per share:
 
-| Flags | Policy |
-| --- | --- |
-| none | Anyone with the URL |
-| `--password <shared>` | Shared password |
+| Flags                              | Policy                                  |
+| ---------------------------------- | --------------------------------------- |
+| none                               | Anyone with the URL                     |
+| `--password <shared>`              | Shared password                         |
 | `--password <shared> --emails a,b` | Listed emails plus that shared password |
-| `--emails a,b --passwords p1,p2` | Listed emails with their own passwords |
+| `--emails a,b --passwords p1,p2`   | Listed emails with their own passwords  |
 
 `--emails` is an allowlist, not an invitation. Quickshare does not send mail.
 
@@ -105,30 +105,30 @@ Default URLs can live on `workers.dev`. A custom domain is optional.
 
 ### Application
 
-| Area | Choice |
-| --- | --- |
-| Language | TypeScript 7 |
-| Package manager | pnpm 11, Node 24 |
-| Runtime logic | Effect v4 |
-| Infrastructure | Alchemy v2 (`alchemy.run.ts` is the only composition root) |
-| CLI | Thin HTTP client of the management API |
-| MCP | `@modelcontextprotocol/server` 2.x, spec `2026-07-28`, mounted on the API Worker |
-| Lint / format | Oxlint (type-aware, Effect + anti-slop) and Oxfmt |
-| Tests | Vitest with Effect test support |
+| Area            | Choice                                                                           |
+| --------------- | -------------------------------------------------------------------------------- |
+| Language        | TypeScript 7                                                                     |
+| Package manager | pnpm 11, Node 24                                                                 |
+| Runtime logic   | Effect v4                                                                        |
+| Infrastructure  | Alchemy v2 (`alchemy.run.ts` is the only composition root)                       |
+| CLI             | Thin HTTP client of the management API                                           |
+| MCP             | `@modelcontextprotocol/server` 2.x, spec `2026-07-28`, mounted on the API Worker |
+| Lint / format   | Oxlint (type-aware, Effect + anti-slop) and Oxfmt                                |
+| Tests           | Vitest with Effect test support                                                  |
 
 Toolchain and versions follow `web-project-base`, without SvelteKit, Vite, Better Auth, or Drizzle-for-auth. There is no dual TypeScript 6/7 compiler.
 
 ### Cloudflare
 
-| Resource | Role |
-| --- | --- |
-| API Worker | Management HTTP API and `/mcp` |
-| Content Worker | Public file serving and visitor login |
-| R2 | Private object store for share files |
-| D1 | Share metadata, credential hashes, expiry |
-| Cron | Delete expired shares |
-| Rate Limit binding | Throttle publish and login attempts |
-| `Alchemy.Random` | Bootstrap API key |
+| Resource           | Role                                      |
+| ------------------ | ----------------------------------------- |
+| API Worker         | Management HTTP API and `/mcp`            |
+| Content Worker     | Public file serving and visitor login     |
+| R2                 | Private object store for share files      |
+| D1                 | Share metadata, credential hashes, expiry |
+| Cron               | Delete expired shares                     |
+| Rate Limit binding | Throttle publish and login attempts       |
+| `Alchemy.Random`   | Bootstrap API key                         |
 
 No Pages, no public R2 bucket, no Workers for Platforms, no Durable Objects, no Queues, no Workflows, no Better Auth, and no Email Routing in the first version.
 

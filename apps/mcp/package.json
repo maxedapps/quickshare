@@ -1,0 +1,10 @@
+{
+  "name": "@quickshare/mcp",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.0.0",
+    "effect": "4.0.0-rc.110"
+  }
+}

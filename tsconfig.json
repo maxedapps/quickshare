@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["node"]
+  },
+  "include": [
+    "alchemy.run.ts",
+    "oxlint.config.ts",
+    "vitest.config.ts",
+    "infra/**/*.ts",
+    "apps/*/src/**/*.ts"
+  ]
+}

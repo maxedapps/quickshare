@@ -1,0 +1,16 @@
+node_modules/
+.pnpm-store/
+
+.env
+.env.*
+!.env.example
+
+build/
+dist/
+coverage/
+
+.alchemy/
+.wrangler/
+.dev.vars
+*.tsbuildinfo
+.DS_Store
