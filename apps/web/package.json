@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@quickshare/contracts": "workspace:*",
     "alchemy": "2.0.0-beta.72",
     "effect": "4.0.0-rc.110"
   }

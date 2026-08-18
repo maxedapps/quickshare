@@ -11,9 +11,13 @@
     "format:check": "oxfmt --check .",
     "lint": "oxlint --type-aware --deny-warnings .",
     "test": "vitest run",
-    "check": "pnpm typecheck && pnpm format:check && pnpm lint && pnpm test"
+    "test:node": "vitest --config vitest.node.config.ts run",
+    "test:worker": "vitest --config vitest.worker.config.ts run",
+    "check": "pnpm typecheck && pnpm format:check && pnpm lint && pnpm test",
+    "quickshare": "node apps/cli/src/main.ts"
   },
   "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "0.22.0",
     "@cloudflare/workers-types": "5.20260811.1",
     "@effect/platform-node": "4.0.0-rc.110",
     "@effect/tsgo": "0.36.5",
@@ -21,6 +25,8 @@
     "@oxlint/plugins": "1.78.0",
     "@types/node": "24.13.3",
     "alchemy": "2.0.0-beta.72",
+    "drizzle-kit": "1.0.0-rc.5-ab785fc",
+    "drizzle-orm": "1.0.0-rc.5-ab785fc",
     "effect": "4.0.0-rc.110",
     "oxfmt": "0.63.0",
     "oxlint": "1.78.0",

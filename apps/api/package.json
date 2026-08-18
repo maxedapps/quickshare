@@ -4,6 +4,9 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@modelcontextprotocol/server": "2.0.0",
+    "@quickshare/contracts": "workspace:*",
+    "@quickshare/mcp": "workspace:*",
     "alchemy": "2.0.0-beta.72",
     "effect": "4.0.0-rc.110"
   }

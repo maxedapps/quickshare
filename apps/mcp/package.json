@@ -3,8 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "exports": {
+    ".": "./src/server.ts",
+    "./operations": "./src/operations.ts"
+  },
   "dependencies": {
     "@modelcontextprotocol/server": "2.0.0",
+    "@quickshare/contracts": "workspace:*",
     "effect": "4.0.0-rc.110"
   }
 }

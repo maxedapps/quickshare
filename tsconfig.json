@@ -1,13 +1,17 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "types": ["node"]
+    "types": ["node", "@cloudflare/workers-types"]
   },
   "include": [
     "alchemy.run.ts",
     "oxlint.config.ts",
     "vitest.config.ts",
     "infra/**/*.ts",
-    "apps/*/src/**/*.ts"
-  ]
+    "apps/*/src/**/*.ts",
+    "packages/*/src/**/*.ts",
+    "vitest.node.config.ts",
+    "vitest.worker.config.ts"
+  ],
+  "exclude": ["**/*.test.ts", "tests/**"]
 }

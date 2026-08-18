@@ -1,9 +1,10 @@
 import { defineConfig } from "vitest/config";
 
+import nodeConfig from "./vitest.node.config.ts";
+import workerConfig from "./vitest.worker.config.ts";
+
 export default defineConfig({
   test: {
-    environment: "node",
-    passWithNoTests: true,
-    include: ["apps/**/*.test.ts", "infra/**/*.test.ts"],
+    projects: [nodeConfig, workerConfig],
   },
 });

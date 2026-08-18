@@ -1,5 +1,6 @@
 packages:
   - apps/*
+  - packages/*
 
 strictPeerDependencies: true
 
@@ -8,6 +9,7 @@ strictPeerDependencies: true
 peerDependencyRules:
   allowedVersions:
     "capnp-es@0.0.16>typescript": "7.0.2"
+    "wrangler@4.124.0>@cloudflare/workers-types": "5.20260811.1"
 
 overrides:
   "@alchemy.run/cloudflare-runtime@2.0.0-beta.72>capnp-es": "0.0.16"
@@ -17,6 +19,8 @@ minimumReleaseAgeExclude:
   - "@effect/platform-node@4.0.0-rc.110"
   - "@effect/platform-node-shared@4.0.0-rc.110"
   - "@effect/vitest@4.0.0-rc.110"
+  - drizzle-orm@1.0.0-rc.5-ab785fc
+  - drizzle-kit@1.0.0-rc.5-ab785fc
 
 allowBuilds:
   esbuild: true

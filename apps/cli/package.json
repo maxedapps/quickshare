@@ -7,6 +7,11 @@
   },
   "type": "module",
   "dependencies": {
-    "effect": "4.0.0-rc.110"
+    "@effect/platform-node": "4.0.0-rc.110",
+    "@quickshare/contracts": "workspace:*",
+    "effect": "4.0.0-rc.110",
+    "marked": "18.0.10",
+    "mime": "4.1.0",
+    "smol-toml": "1.6.0"
   }
 }
